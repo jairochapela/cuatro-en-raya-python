@@ -1,4 +1,4 @@
-
+from colorama import Fore
 
 class Tablero:
 
@@ -14,13 +14,14 @@ class Tablero:
             for columna in range(7):
                 match self.casillas[columna][fila]:
                     case 1:
-                        s += "| O "
+                        s += "|" + Fore.RED + " O " + Fore.RESET
                     case 2:
-                        s += "| X "
+                        s += "|" + Fore.YELLOW + " X " + Fore.RESET
                     case _:
                         s += "|   "
             s += "|\n"
             s += "+---"*7 + "+\n"
+        s += "  0   1   2   3   4   5   6\n"
         return s
 
 
