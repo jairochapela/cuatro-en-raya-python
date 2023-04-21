@@ -1,0 +1,6 @@
+#!env python3
+
+from game import Game
+
+g = Game()
+g.iniciar()

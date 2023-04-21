@@ -4,11 +4,11 @@ from tablero import Tablero
 
 class Game:
 
-    def __init__(self):
+    def __init__(self, modoHumano = False):
         self.tablero = Tablero()
         self.jugadores = [
             JugadorHumano(Tablero.ROJO),  # jugador 0
-            JugadorIA(Tablero.AMARILLO)   # jugador 1
+            JugadorHumano(Tablero.AMARILLO) if modoHumano else JugadorIA(Tablero.AMARILLO)   # jugador 1
         ]
         self.turno = 0
 
