@@ -66,6 +66,15 @@ class Tablero:
         # Si no se da alguna de las anteriores, devolver 0
         return 0
 
+    @property
+    def lleno(self):
+        '''
+        Devuelve True si el tablero está lleno; False en caso contrario.
+        La condición de lleno se da cuando todas las columnas tienen todas las celdas con
+        valores distintos de 0.
+        '''
+        return all([all(self.casillas[columna]) for columna in range(7)])
+
 
 if __name__ == '__main__':
     tablero = Tablero()
